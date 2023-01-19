@@ -23,6 +23,7 @@
             <br>
             <button type="submit">Submit</button>
         </form>
+        <a href="/LogoutServlet">Logout</a>
     </div>
 </div>
 
