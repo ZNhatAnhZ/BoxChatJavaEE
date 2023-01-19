@@ -11,6 +11,18 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>Registration page</h1>
+<form method="POST">
+    <label name="username">Username</label>
+    <input type="text">
+    <br>
+    <label name="password">Password</label>
+    <input type="password">
+    <br>
+    <label name="confirm_password">Password confirmation</label>
+    <input type="password">
+    <br>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>

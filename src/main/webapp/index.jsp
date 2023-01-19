@@ -5,15 +5,17 @@
     <title>Login page</title>
 </head>
 <body>
-<h1>"Login page"</h1>
+<h1>Login page</h1>
 <form method="POST">
-    <label></label>
-    <input>
-    <label></label>
-    <input>
-    <button>Submit</button>
+    <label name="username">Username</label>
+    <input type="text">
+    <br>
+    <label name="password">Password</label>
+    <input type="password">
+    <br>
+    <button type="submit">Submit</button>
 </form>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="Registration.jsp">Register here!!!</a>
 </body>
 </html>
