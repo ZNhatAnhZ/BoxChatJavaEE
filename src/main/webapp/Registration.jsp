@@ -12,15 +12,16 @@
 </head>
 <body>
 <h1>Registration page</h1>
-<form method="POST">
+<h2>${result}</h2>
+<form method="POST" action="/RegistrationServlet">
     <label name="username">Username</label>
-    <input type="text">
+    <input type="text" name="username">
     <br>
     <label name="password">Password</label>
-    <input type="password">
+    <input type="password" name="password">
     <br>
     <label name="confirm_password">Password confirmation</label>
-    <input type="password">
+    <input type="password" name="confirm_password">
     <br>
     <button type="submit">Submit</button>
 </form>

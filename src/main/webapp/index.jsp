@@ -6,12 +6,13 @@
 </head>
 <body>
 <h1>Login page</h1>
-<form method="POST">
+<h2>${result}</h2>
+<form method="POST" action="/LoginServlet">
     <label name="username">Username</label>
-    <input type="text">
+    <input type="text" name="username">
     <br>
     <label name="password">Password</label>
-    <input type="password">
+    <input type="password" name="password">
     <br>
     <button type="submit">Submit</button>
 </form>
