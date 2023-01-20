@@ -33,7 +33,7 @@ public class UserDao {
     }
 
     public boolean confirmUser(User user) throws ClassNotFoundException {
-        String sql = "SELECT username, password  FROM user WHERE username = ?";
+        String sql = "SELECT *  FROM user WHERE username = ?";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -51,7 +51,7 @@ public class UserDao {
             User querriedUser = null;
 
             if (result.next()) {
-                querriedUser = new User(result.getString("username"), result.getString("password"));
+                querriedUser = new User(Integer.parseInt(result.getString("id")) ,result.getString("username"), result.getString("password"));
             }
 
             connection.close();

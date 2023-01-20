@@ -28,4 +28,5 @@
 </div>
 
 </body>
+<script src="./js/webSocketClient.js"></script>
 </html>
