@@ -1,23 +1,23 @@
 package model;
 
 public class Message {
-    private int user_id;
+    private String username;
     private String content;
 
     public Message() {
     }
 
-    public Message(int user_id, String content) {
-        this.user_id = user_id;
+    public Message(String username, String content) {
+        this.username = username;
         this.content = content;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getContent() {
@@ -26,5 +26,10 @@ public class Message {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" + "content=" + content + ", username=" + username + '}';
     }
 }

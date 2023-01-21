@@ -1,11 +1,15 @@
-let wsURI = "ws://" + document.location.host + "/RoomChatEndPoint";
+let wsURI = "ws://" + document.location.host + "/RoomChatEndPointFinal";
 
 // Create WebSocket connection.
 const socket = new WebSocket(wsURI);
 
 // Connection opened
 socket.addEventListener('open', (event) => {
-    socket.send('Hello Server!');
+    let json = {
+        "username": "a",
+        "content": "test message"
+    }
+    socket.send(JSON.stringify(json));
 });
 
 // Listen for messages
