@@ -1,4 +1,6 @@
-<%--
+<%@ page import="model.Message" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: NhatAnh
   Date: 19-Jan-23
@@ -11,18 +13,22 @@
     <title>Room Chat</title>
 </head>
 <body>
-<h1>Welcome ${user.getUsername()}</h1>
+<h1 id ="username">Welcome ${user.getUsername()}</h1>
 <div>
-    <div style="height: 500px; width: 800px; border: solid">
-        <p>someone's name said: lmao</p>
+    <div id="message_display" style="min-height: 500px; min-width: 800px; border: solid; overflow: auto;">
+        <%
+            List<Message> messages = (List) request.getAttribute("messages");
+           for(Message message: messages) { %>
+                <p><%= message.getUsername() %> said: <%= message.getContent()%></p> <%
+            };
+        %>
+
     </div>
     <div>
-        <form method="POST" action="/RoomChatServlet">
-            <label name="message">Message:</label>
-            <input type="text" name="message">
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+        <label name="message">Message:</label>
+        <input id = "message_input" type="text" name="message">
+        <br>
+        <button id = "submit_button" >Submit</button>
         <a href="/LogoutServlet">Logout</a>
     </div>
 </div>

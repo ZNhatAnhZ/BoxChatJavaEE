@@ -10,15 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a64e94-39a9-4d6e-ae4c-18489603e44e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/MessageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/websocket/MessageDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/websocket/MessageEncoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RoomChatEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/websocket/RoomChatEndPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RoomChatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RoomChatServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/websocket/MessageEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/websocket/MessageEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/websocket/RoomChatEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/websocket/RoomChatEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RoomChat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RoomChat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/webSocketClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/webSocketClient.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +185,7 @@
       <updated>1674115863649</updated>
       <workItem from="1674115864729" duration="19011000" />
       <workItem from="1674221605352" duration="6871000" />
-      <workItem from="1674263468602" duration="7778000" />
+      <workItem from="1674263468602" duration="15802000" />
     </task>
     <servers />
   </component>

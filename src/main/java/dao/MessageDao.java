@@ -2,10 +2,9 @@ package dao;
 
 import model.Message;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MessageDao {
     public int registerMessage(Message message) throws ClassNotFoundException {
@@ -28,6 +27,37 @@ public class MessageDao {
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
             result = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            // process sql exception
+            printSQLException(e);
+        }
+        return result;
+    }
+
+    public List<Message> getAllMessages() throws ClassNotFoundException {
+        List<Message> result = new ArrayList<Message>();
+
+        String sql = "select user.username, messages.content from messages" +
+                " join user on user.id = messages.user_id order by messages.id asc;";
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        try (Connection connection = DriverManager
+                .getConnection("jdbc:mysql://localhost:3306/boxchatjavaee?useSSL=false", "root", "root");
+
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            System.out.println(preparedStatement);
+
+
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                result.add(new Message(rs.getString("username"), rs.getString("content")));
+            }
 
         } catch (SQLException e) {
             // process sql exception

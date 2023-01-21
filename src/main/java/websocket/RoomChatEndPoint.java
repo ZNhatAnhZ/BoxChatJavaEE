@@ -18,17 +18,16 @@ public class RoomChatEndPoint {
     private static Set<Session> sessions = Collections.synchronizedSet(new HashSet<Session>());
 
     @OnMessage
-    public void onMessage(Session session, Message message) {
-        System.out.println("Greeting received:" + message.toString());
+    public void onMessage(Session session, Message message) throws ClassNotFoundException {
+        System.out.println("message received:" + message.toString());
+        messageDao.registerMessage(message);
+
         for(Session s : sessions) {
             try {
                 s.getBasicRemote().sendObject(message);
-                messageDao.registerMessage(message);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             } catch (EncodeException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }

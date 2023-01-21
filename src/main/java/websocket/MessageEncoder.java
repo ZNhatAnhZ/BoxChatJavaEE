@@ -8,7 +8,6 @@ import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 
 public class MessageEncoder implements Encoder.Text<Message>{
-
     Gson gson = new Gson();
     @Override
     public String encode(Message message) throws EncodeException {
